@@ -1,0 +1,21 @@
+import { useRoutes } from 'react-router-dom';
+import Home from '../../pages/home';
+import MyAccount from '../../pages/myAccount';
+import MyOrder from '../../pages/myOrder';
+import MyOrders from '../../pages/myOrders';
+import NotFound from '../../pages/notFound';
+import SignIn from '../../pages/signIn';
+
+const AppRoutes = () => {
+  let routes = useRoutes([
+    { path: '/', element: <Home /> },
+    { path: '/my-account', element: <MyAccount /> },
+    { path: '/my-order', element: <MyOrder /> },
+    { path: '/my-orders', element: <MyOrders /> },
+    { path: '/*', element: <NotFound /> },
+    { path: '/sign-in', element: <SignIn /> },
+  ]);
+  return routes;
+}
+
+export default AppRoutes;
