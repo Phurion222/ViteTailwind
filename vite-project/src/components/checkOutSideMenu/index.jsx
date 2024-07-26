@@ -21,7 +21,7 @@ function CheckOutSideMenu() {
             totalPrice: totalPrice(context.cartProducts)
         }
 
-        context.setOrder(...context.order, orderToAdd);
+        context.setOrder([...context.order, orderToAdd]);
         context.setCartProducts([]);
     }
 
@@ -31,12 +31,12 @@ function CheckOutSideMenu() {
             <h2 className='font-medium text-xl'>My Order</h2>
             <div onClick={() => context.closeCheckOut()} className='cursor-pointer'><XCircleIcon className='size-6'/></div>
         </div>
-        <div className='px-6 overflow-y-scroll'>
+        <div className='px-6 overflow-y-scroll flex-1'>
             {context.cartProducts.map(product => (
                 <OrderCard key={product.id} id={product.id} title={product.title} price={product.price} imageUrl={product.image} handleDelete={hanldeDelete}/>
             ))}
         </div>
-        <div className='px-6'>
+        <div className='px-6 mb-6'>
             <p className='flex justify-between items-center'>
                 <span className='font-light'>Total:</span>
                 <span className='font-medium text-2xl'>${totalPrice(context.cartProducts)}</span>
