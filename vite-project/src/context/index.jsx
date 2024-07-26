@@ -9,6 +9,8 @@ export const ShoppingCarProvider = ({ children }) => {
     const [productToShow, setProductToShow] = useState({});
     const [cartProducts, setCartProducts] = useState([]);
 
+    const [order, setOrder] = useState([]);
+
     const openDetailProduct = () => setIsProductDetailOpen(true);
     const closeDetailProduct = () => setIsProductDetailOpen(false);
 
@@ -28,7 +30,9 @@ export const ShoppingCarProvider = ({ children }) => {
             setCartProducts,
             isCheckOutOpen,
             openCheckOut,
-            closeCheckOut
+            closeCheckOut,
+            order, 
+            setOrder
         }}>
             {children}
         </ShoppingCarContext.Provider>
