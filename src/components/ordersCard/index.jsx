@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/solid'
 const OrdersCard = props => {
     const { totalPrice, totalProducts } = props;
     return (
-        <div className='flex justify-between items-center border border-black rounded-lg p-4 w-80 mb-4'>
+        <div className='flex justify-between items-center border border-black rounded-lg p-4 w-80 mb-4 cursor-pointer'>
             <div className='flex justify-between w-full'>
                <p className='flex flex-col'>
                     <span className='font-light'>01.02.23</span>

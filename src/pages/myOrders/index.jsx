@@ -8,7 +8,7 @@ function MyOrders() {
   const context = useContext(ShoppingCarContext);
   return (
     <div>
-      <div className='flex items-center justify-center w-80 relative'>
+      <div className='flex items-center justify-center w-80 mb-4 relative'>
         <h1 className='font-medium text-xl'>My Orders</h1>
       </div>
       { context.order.map((order, index) => (
